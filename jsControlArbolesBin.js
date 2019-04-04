@@ -1,7 +1,7 @@
 let newArbol = new arbolBinario()
 document.getElementById('boton').addEventListener('click', function(){
     let dato = document.getElementById('dato').value
-    parseInt(dato)
+    dato = parseInt(dato)
     let newNodo = new Nodo(dato)
     
     newArbol.agregar(newNodo)
