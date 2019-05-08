@@ -97,5 +97,32 @@ class arbolBinario
         }
         return cad
     }
+
+    search(dato){
+        if(this.raiz == null){
+            return false
+        }
+        else
+        return this.buscar(dato,this.raiz)
+    }
+
+    buscar(dato, raiz)
+    {
+        if(raiz == null)
+        {
+            return false
+        }
+        else
+        if(raiz.dato == dato)
+        {
+            return true
+        }
+        else
+        if(dato < raiz.dato){
+            return this.buscar(dato, raiz.HIzq)
+        }
+        else
+        return this.buscar(dato, raiz.HDer)
+    }
 }
 
